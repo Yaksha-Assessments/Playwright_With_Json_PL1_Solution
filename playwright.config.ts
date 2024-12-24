@@ -2,8 +2,8 @@ import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
   testDir: "./src/tests",
-  retries: 1,
-  timeout: 240000,
+  retries: 0,
+  timeout: 120000,
   expect: {
     timeout: 100000,
   },
@@ -20,7 +20,7 @@ export default defineConfig({
       name: "chromium",
       use: {
         ...devices["Desktop Chrome"],
-        viewport: { width: 1920, height: 1080 },
+        viewport: { width: 1520, height: 1080 },
         launchOptions: {
           args: ["--disable-web-security"],
         },
